@@ -84,7 +84,7 @@ class Rover {
     
     PWMSetting setting2{0, 1.2, 0};
     pwm_queue_.AddCommand(setting2);
-	}
+  }
 	private:
   
   pwm pwm_;
@@ -133,10 +133,13 @@ int main(int argc, char* argv[])
   std::cerr << "1";
   Rover rover;
   std::cerr << "2";
-   rover.Init();
+  
+  // Run the command server
+  // rover.Init();
+
   std::cerr << "3";
    //rover.ServoTest();
   std::cerr << "4";
-  //testCommandQueue();
+  testCommandQueue();
   return 0;
 }
